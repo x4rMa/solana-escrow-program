@@ -1,0 +1,21 @@
+[package]
+description = "Solana-based Escrow Program"
+edition = "2021"
+name = "solana-escrow-program"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "solana_escrow_program"
+
+[features]
+cpi = ["no-entrypoint"]
+default = []
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+
+[dependencies]
+anchor-lang = "0.28.0"
+anchor-spl = "0.28.0"
+spl-token = {version = "3.5.0", features = ["no-entrypoint"]}
